@@ -15,18 +15,21 @@
     position: relative;
     background: white;
     border: 3px solid gray;
-    height: 200px;
-    width: 150px;
+    height: 300px;
+    width: 250px;
     text-align: center;
-    transition: transform 175ms ease-in-out;
+    transition: transform 100ms ease-in-out;
     margin-right: 10px;
     margin-bottom: 10px;
     box-shadow: 10px 10px 20px black;
+    text-shadow:10px 10px 20px  black;
+    align-content: center;
 }
 
 #tech li img {
     width: 80%;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #tech li h3 {
@@ -34,7 +37,7 @@
     margin: 4px;
 }
 
-#tech{
-    display: block;
-    margin: auto;
+.table {
+    display: table;
+    margin: 0 auto;
 }
