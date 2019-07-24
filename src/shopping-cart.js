@@ -18,7 +18,7 @@ totalCell.textContent = orderTotal;
 
 
 function listItems() {
-    for (let i = 0; i < order.length; i++) {
+    for(let i = 0; i < order.length; i++) {
         const lineItem = order[i];
         const tech = findProduct(techs, lineItem.code);
         const dom = compileLineItem(lineItem, tech);
