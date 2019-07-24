@@ -1,4 +1,5 @@
-
+import { calcLineTotal } from './register.js';
+import { toUSD } from './format.js';
 
 
 function compileLineItem(lineItem, tech) {
@@ -19,7 +20,7 @@ function compileLineItem(lineItem, tech) {
 
     const totalCell = document.createElement('td');
     totalCell.className = 'Line-item-total';
-    const total = calcLineTotal(lineItem.quantity, tech.price)
+    const total = calcLineTotal(lineItem.quantity, tech.price);
     totalCell.textContent = toUSD(total);
     tr.appendChild(totalCell);
 
