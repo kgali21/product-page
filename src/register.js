@@ -1,13 +1,10 @@
 
-
-export function findTech(techs, code){
-
-
+export function findProduct(techs, code){
     for(let i = 0; i < techs.length; i++){
-        const tech = techs[i];
+        const techProduct = techs[i];
 
-        if(tech.code === code){
-            return tech;
+        if(techProduct.code === code){
+            return techProduct;
         }
     }
 
@@ -20,9 +17,14 @@ export function calcLineTotal(quantity, price){
 
 export function calcOrderTotal(shoppingCart, techs){
 
-
-
-
-
-
+    let orderTotal = 0;
+    
+    for(let j = 0; j < shoppingCart.length; j++) {
+        
+        const itemData = findProduct(techs, shoppingCart[j].code);
+        const lineTotal = calcLineTotal(shoppingCart[j].quantity, itemData.price);
+        orderTotal += lineTotal;
+    }
+    return orderTotal;
+    
 }

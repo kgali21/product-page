@@ -19,7 +19,7 @@ function compileLineItem(lineItem, tech) {
     tr.appendChild(priceCell);
 
     const totalCell = document.createElement('td');
-    totalCell.className = 'Line-item-total';
+    totalCell.className = 'line-item-total';
     const total = calcLineTotal(lineItem.quantity, tech.price);
     totalCell.textContent = toUSD(total);
     tr.appendChild(totalCell);

@@ -1,6 +1,6 @@
 import techs from '../src/data/tech.js';
-import order from '../src/data/order.js';
-import { findTech, calcLineTotal, calcOrderTotal } from '../src/register.js';
+import shoppingCart from '../src/data/order.js';
+import { findProduct, calcLineTotal, calcOrderTotal } from '../src/register.js';
 const test = QUnit.test;
 
 QUnit.module('Register');
@@ -17,7 +17,7 @@ test('Find tech by code', assert => {
         cost: 5.00
     };
 
-    const foundProduct = findTech(techs, code);
+    const foundProduct = findProduct(techs, code);
 
     assert.deepEqual(foundProduct, expected);
 });
@@ -32,3 +32,11 @@ test('calculate line total', (assert) => {
     assert.equal(total, expected);
 
 });
+
+test ('calculate order total', (assert => {
+    const expected = 1003470.00;
+
+    const orderTotal = calcOrderTotal(shoppingCart, techs);
+
+    assert.equal(orderTotal, expected);
+}));
