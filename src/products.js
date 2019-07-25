@@ -1,5 +1,4 @@
 import techs from './data/tech.js';
-
 import compileTech from './compile-tech.js';
 
 const list = document.getElementById('tech');
