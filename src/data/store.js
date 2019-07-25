@@ -1,4 +1,4 @@
-import cart from './order.js';
+import techs from './tech.js';
 import { findProduct } from '../register.js';
 
 const PRODUCT_KEY = 'products';
@@ -19,8 +19,8 @@ const store = {
         let products = store.get(PRODUCT_KEY);
 
         if(!products){
-            store.save(PRODUCT_KEY, cart);
-            products = cart;
+            store.save(PRODUCT_KEY, techs);
+            products = techs;
         }
         return products;
     },
