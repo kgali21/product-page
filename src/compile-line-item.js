@@ -14,6 +14,9 @@ function compileLineItem(lineItem, tech) {
     quantityCell.textContent = lineItem.quantity;
     tr.appendChild(quantityCell);
     
+    if(!tech.price){
+        console.log(tech);
+    }
     const priceCell = document.createElement('td');
     priceCell.textContent = toUSD(tech.price);
     tr.appendChild(priceCell);

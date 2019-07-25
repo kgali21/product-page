@@ -1,5 +1,5 @@
 import store from '../src/data/store.js';
-import techs from '../src/data/order.js';
+import cart from '../src/data/order.js';
 
 const test = QUnit.test;
 
@@ -25,7 +25,7 @@ test('get and save', assert => {
 test('get bootstrapped data', (assert) => {
     const products = store.getProducts();
 
-    assert.deepEqual(products, techs);
+    assert.deepEqual(products, cart);
 
 });
 
@@ -52,7 +52,7 @@ test('product code adds to shopping cart', (assert) => {
 
 test('product code to shopping cart', (assert) => {
     const code = 'plumbus';
-    const expected = techs[0];
+    const expected = cart[0];
 
     const tech = store.getProduct(code);
 

@@ -1,4 +1,4 @@
-import techs from './order.js';
+import cart from './order.js';
 import { findProduct } from '../register.js';
 
 const PRODUCT_KEY = 'products';
@@ -15,17 +15,15 @@ const store = {
         const item = JSON.parse(json);
         return item;
     },
-    
     getProducts() {
         let products = store.get(PRODUCT_KEY);
 
         if(!products){
-            store.save(PRODUCT_KEY, techs);
-            products = techs;
+            store.save(PRODUCT_KEY, cart);
+            products = cart;
         }
         return products;
     },
-
     getProduct(code) {
         const products = store.getProducts();
 
@@ -33,7 +31,6 @@ const store = {
 
         return product;
     },
-
     getShoppingCart() {
         let shoppingCart = store.get(SHOPPING_CART_KEY);
 
@@ -42,7 +39,6 @@ const store = {
         }
         return shoppingCart;
     },
-
     orderProduct(code) {
         const shoppingCart = store.getShoppingCart();
 
@@ -60,4 +56,5 @@ const store = {
         store.save(SHOPPING_CART_KEY, shoppingCart);
     }
 };
+
 export default store;

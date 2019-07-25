@@ -1,4 +1,4 @@
-const shoppingCart = [{
+const cart = [{
     code: 'plumbus',
     quantity: 1
     // 20.00
@@ -20,4 +20,4 @@ const shoppingCart = [{
     //1000000.00
 }];
 
-export default shoppingCart;
+export default cart;

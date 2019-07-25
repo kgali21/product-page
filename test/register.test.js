@@ -1,5 +1,5 @@
 import techs from '../src/data/tech.js';
-import shoppingCart from '../src/data/order.js';
+import cart from '../src/data/order.js';
 import { findProduct, calcLineTotal, calcOrderTotal } from '../src/register.js';
 const test = QUnit.test;
 
@@ -36,7 +36,7 @@ test('calculate line total', (assert) => {
 test ('calculate order total', (assert => {
     const expected = 1003470.00;
 
-    const orderTotal = calcOrderTotal(shoppingCart, techs);
+    const orderTotal = calcOrderTotal(cart, techs);
 
     assert.equal(orderTotal, expected);
 }));

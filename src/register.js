@@ -15,14 +15,14 @@ export function calcLineTotal(quantity, price){
     return Number((quantity * price).toFixed(2));
 }
 
-export function calcOrderTotal(shoppingCart, techs){
+export function calcOrderTotal(cart, techs){
 
     let orderTotal = 0;
     
-    for(let j = 0; j < shoppingCart.length; j++) {
+    for(let j = 0; j < cart.length; j++) {
         
-        const itemData = findProduct(techs, shoppingCart[j].code);
-        const lineTotal = calcLineTotal(shoppingCart[j].quantity, itemData.price);
+        const itemData = findProduct(techs, cart[j].code);
+        const lineTotal = calcLineTotal(cart[j].quantity, itemData.price);
         orderTotal += lineTotal;
     }
     return orderTotal;

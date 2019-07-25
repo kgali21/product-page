@@ -14,7 +14,9 @@ function compileTech(tech) {
 
     const p = document.createElement('price');
     p.className = 'price';
-
+if(!tech.price){
+    console.log(tech);
+}
     const usd = tech.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
     
     const priceTextNode = document.createTextNode(usd);
