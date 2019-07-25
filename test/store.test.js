@@ -50,6 +50,21 @@ test('product code adds to shopping cart', (assert) => {
 
 });
 
+test('product already in shopping cart', (assert) => {
+    const code = 'plumbus';
+    const expected = [{
+        code: 'plumbus',
+        quantity: 2
+    }];
+
+    store.orderProduct(code);
+    store.orderProduct(code);
+
+    const shoppingCart = store.getShoppingCart();
+
+    assert.deepEqual(shoppingCart, expected);
+});
+
 test('product code to shopping cart', (assert) => {
     const code = 'plumbus';
     const expected = techs[0];
