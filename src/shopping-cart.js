@@ -1,12 +1,13 @@
 import compileLineItem from './compile-line-item.js';
 import store from './data/store.js';
 import { toUSD } from './format.js';
-import techs from './data/tech.js';
+
 import { calcOrderTotal } from './register.js';
 
 const tbody = document.querySelector('tbody');
 
 const shopCart = store.getShoppingCart();
+const techs = store.getProducts();
 
 for(let i = 0; i < shopCart.length; i++) {
     const lineItem = shopCart[i];
