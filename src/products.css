@@ -1,0 +1,43 @@
+#tech {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#tech li:hover {
+    box-shadow: 1px 1px 2px #cccccc;
+    transform: translate3d(-1px, -1px, 0);
+}
+
+#tech li {
+    list-style: none;
+    position: relative;
+    background: white;
+    border: 3px solid gray;
+    height: 300px;
+    width: 250px;
+    text-align: center;
+    transition: transform 100ms ease-in-out;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 20px black;
+    text-shadow:10px 10px 20px  black;
+    align-content: center;
+}
+
+#tech li img {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#tech li h3 {
+    font-size: 1.2rem;
+    margin: 4px;
+}
+
+.table {
+    display: table;
+    margin: 0 auto;
+}

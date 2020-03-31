@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+body{
+    background: url("../assets/portal.jpg");
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+}
