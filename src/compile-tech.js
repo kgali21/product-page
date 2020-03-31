@@ -1,3 +1,6 @@
+import { toUSD } from './format.js';
+import store from './data/store.js';
+
 function compileTech(tech) {
     const li = document.createElement('li');
     li.className = tech.category;
@@ -15,14 +18,18 @@ function compileTech(tech) {
     const p = document.createElement('price');
     p.className = 'price';
 
-    const usd = tech.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-    
+    const usd = toUSD(tech.price);
+
     const priceTextNode = document.createTextNode(usd);
     p.appendChild(priceTextNode);
 
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = tech.code;
+    button.addEventListener('click', () => {
+        store.orderProduct(tech.code);
+    });
+
     p.appendChild(button);
 
     li.appendChild(p);

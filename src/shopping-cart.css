@@ -1,0 +1,49 @@
+table, .order-button-container{
+    width: 100%;
+    max-width: 400px;;
+}
+
+.order-button-container {
+    text-align: right;
+    margin: 0 auto;
+}
+
+button{
+    font-size: 20px;
+    margin-top: 20px;
+    border: 2px inset rgb(255, 66, 66);
+}
+
+table {
+    border-collapse: collapse;
+    border: 5px inset rgb(255, 66, 66);
+    margin: 0 auto;
+}
+
+thead {
+    background: gray;
+    color: white;
+}
+
+
+table th, table td {
+    text-align: right;
+    padding: 20px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+tbody {
+    background: white;
+}
+
+tr{
+    border-bottom: inset red;
+}
+
+tfoot{
+    background: gray;
+    color: white;
+}
