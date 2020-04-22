@@ -73,3 +73,19 @@ test('product code to shopping cart', (assert) => {
 
     assert.deepEqual(tech, expected);
 });
+
+test('add new product', (assert) => {
+    const product = {
+        code: 'reverse-defib',
+        name: 'Reverse Defib',
+        image: 'assets/reverse-defib.png',
+        description: 'takes the shock out of you',
+        category: 'householdTech',
+        price: 100.00
+    };
+
+    store.addProduct(product);
+    const techs = store.getProducts();
+
+    assert.deepEqual(techs[techs.length - 1], product);
+});
